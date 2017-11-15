@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules>
+  <rule>
+    <id>RULE_010</id>
+    <name>Flow names should match the naming convention</name>
+    <type>element</type>
+    <node>
+      <namespace></namespace>
+      <name>flow</name>
+    </node>
+    <inclusive>true</inclusive>
+    <attributes>
+      <attribute name="name" value="^(((pf-)|(common-)|(api-)|(xh-)|(mf-))+[a-z-]*$)|((post:\/)|(trace:\/)|(connect:\/)|(head:\/)|(put:\/)|(delete:\/)|(options:\/)|(get:\/))+((\/?[a-z]+\/?|\{[a-z][a-zA-Z]+\})+(:application\/json:api-config))*$" />
+    </attributes>
+    <reference>https://confluence.corp.sprint.com:8452/display/MULE/Design+Display+Naming+Convention</reference>
+  </rule>
+</rules>
+
