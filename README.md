@@ -1,2 +1,2 @@
-# mule-design-rule-validator
+# Mule Project Code Validator
 MuleSoft design rule validator
