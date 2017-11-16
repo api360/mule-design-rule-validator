@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules>
+	<rule>
+		<id>RULE_LOGGER_01</id>
+		<name>Do not use message.payloadAs MEL expression</name>
+		<type>element</type>
+		<node>
+			<namespace></namespace>
+			<name>logger</name>
+		</node>
+		<inclusive>false</inclusive>
+		<attributes>
+				<attribute name="message" value="message.payloadAs" />
+		</attributes>
+	</rule>
+</rules>
