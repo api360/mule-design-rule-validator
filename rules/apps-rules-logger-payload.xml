@@ -10,7 +10,7 @@
 		</node>
 		<inclusive>false</inclusive>
 		<attributes>
-				<attribute name="message" value="message.payloadAs" />
+				<attribute name="message" value="^(?!.*payloadAs)" />
 		</attributes>
 	</rule>
 </rules>
