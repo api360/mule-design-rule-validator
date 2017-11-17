@@ -2,7 +2,21 @@
 <rules>
 	<rule>
 		<id>RULE_LOGGER_01</id>
-		<name>Do not use message.payloadAs MEL expression</name>
+		<name>DO NOT use message.payloadAs MEL expression on Logger component</name>
+		<type>element</type>
+		<node>
+			<namespace></namespace>
+			<name>logger</name>
+		</node>
+		<inclusive>false</inclusive>
+		<attributes>
+				<attribute name="message" value="#\[(.*)message.payloadAs(.*)" />
+		</attributes>
+    <reference>https://confluence.corp.sprint.com:8452/display/MULE/Design+Display+Naming+Convention</reference>
+	</rule>
+  <rule>
+		<id>RULE_LOGGER_02</id>
+		<name>The display name needs to be changed. Follow the C4E display naming convention for Logger component. Example:"LOG DEBUG <![CDATA[<replace with your actual essage>]]>"</name>
 		<type>element</type>
 		<node>
 			<namespace></namespace>
@@ -10,7 +24,37 @@
 		</node>
 		<inclusive>true</inclusive>
 		<attributes>
-				<attribute name="message" value="^(?!.*payloadAs)" />
+				<attribute name="doc:name" value="^((LOG ))+[a-zA-Z-\s]*$" />
 		</attributes>
+    <reference>https://confluence.corp.sprint.com:8452/display/MULE/Design+Display+Naming+Convention</reference>
 	</rule>
+  <rule>
+		<id>RULE_CHOICE_01</id>
+		<name>CHOICE 101 Display name"</name>
+		<type>element</type>
+		<node>
+			<namespace></namespace>
+			<name>choice</name>
+		</node>
+		<inclusive>true</inclusive>
+		<attributes>
+				<attribute name="doc:name" value="^((CHECK ))+[a-zA-Z-\s]*$" />
+		</attributes>
+    <reference>https://confluence.corp.sprint.com:8452/display/MULE/Design+Display+Naming+Convention</reference>
+	</rule>
+  <rule>
+		<id>RULE_JSON_01</id>
+		<name>JSON pareser is will not work</name>
+		<type>element</type>
+		<node>
+			<namespace></namespace>
+			<name>when</name>
+		</node>
+		<inclusive>false</inclusive>
+		<attributes>
+				<attribute name="expression" value="#\[(.*)json\:(.*)" />
+		</attributes>
+    <reference>https://confluence.corp.sprint.com:8452/display/MULE/Design+Display+Naming+Convention</reference>
+	</rule>
+
 </rules>
