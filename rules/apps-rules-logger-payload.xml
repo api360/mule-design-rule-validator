@@ -8,7 +8,7 @@
 			<namespace></namespace>
 			<name>logger</name>
 		</node>
-		<inclusive>true</inclusive>
+		<inclusive>false</inclusive>
 		<attributes>
 				<attribute name="message" value="^(?!.*payloadAs)" />
 		</attributes>
