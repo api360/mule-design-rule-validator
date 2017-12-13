@@ -30,7 +30,7 @@
 	</rule>
 	<rule>
 		<id>RULE_DW_03</id>
-		<name>Some of the DataWeave did not externalized the set-payload script. classpath:/dwScripts location. See https://confluence.corp.sprint.com:8452/pages/viewpage.action?pageId=13729837</name>
+		<name>Some of the DataWeave did not externalized the set-payload script. classpath:dwScripts location. See https://confluence.corp.sprint.com:8452/pages/viewpage.action?pageId=13729837</name>
 		<type>configuration</type>
 		<node>
 			<namespace></namespace>
