@@ -28,33 +28,4 @@
 		</attributes>
     <reference>https://confluence.corp.sprint.com:8452/display/MULE/Design+Display+Naming+Convention</reference>
 	</rule>
-  <rule>
-		<id>RULE_CHOICE_01</id>
-		<name>CHOICE 101 Display name"</name>
-		<type>element</type>
-		<node>
-			<namespace></namespace>
-			<name>choice</name>
-		</node>
-		<inclusive>true</inclusive>
-		<attributes>
-				<attribute name="doc:name" value="^((CHECK ))+[a-zA-Z-\s]*$" />
-		</attributes>
-    <reference>https://confluence.corp.sprint.com:8452/display/MULE/Design+Display+Naming+Convention</reference>
-	</rule>
-  <rule>
-		<id>RULE_JSON_01</id>
-		<name>JSON pareser is will not work</name>
-		<type>element</type>
-		<node>
-			<namespace></namespace>
-			<name>when</name>
-		</node>
-		<inclusive>false</inclusive>
-		<attributes>
-				<attribute name="expression" value="#\[(.*)json\:(.*)" />
-		</attributes>
-    <reference>https://confluence.corp.sprint.com:8452/display/MULE/Design+Display+Naming+Convention</reference>
-	</rule>
-
 </rules>

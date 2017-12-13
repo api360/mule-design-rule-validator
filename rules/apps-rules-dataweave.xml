@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules>
+  <rule>
+		<id>RULE_DW_01</id>
+		<name>The display name needs to be changed. Follow the C4E display naming convention for DataWeave component. Example:"DW <![CDATA[<define the purpose of this DW>]]>". See https://confluence.corp.sprint.com:8452/display/MULE/Design+Display+Naming+Convention </name>
+		<type>element</type>
+		<node>
+			<namespace>dw</namespace>
+			<name>transform-message</name>
+		</node>
+		<inclusive>true</inclusive>
+		<attributes>
+				<attribute name="doc:name" value="^((DW ))+[a-zA-Z-\s]*$" />
+		</attributes>
+    <reference>https://confluence.corp.sprint.com:8452/display/MULE/Design+Display+Naming+Convention</reference>
+	</rule>
+  <rule>
+		<id>RULE_DW_02</id>
+		<name>Invalid DataWeave location. Change the path to classpath:dwScripts/<![CDATA[<define the fileName in camelCase>]]></name>
+		<type>element</type>
+		<node>
+			<namespace>dw</namespace>
+			<name>set-payload</name>
+		</node>
+		<inclusive>true</inclusive>
+		<attributes>
+				<attribute name="resource" value="^(classpath:dwScripts\/)+[a-zA-Z\/]*$" />
+		</attributes>
+    <reference>https://confluence.corp.sprint.com:8452/pages/viewpage.action?pageId=13729837</reference>
+	</rule>
+	<rule>
+		<id>RULE_DW_03</id>
+		<name>Some of the DataWeave did not externalized the set-payload script. classpath:/dwScripts location. See https://confluence.corp.sprint.com:8452/pages/viewpage.action?pageId=13729837</name>
+		<type>configuration</type>
+		<node>
+			<namespace></namespace>
+			<name>dw:set-payload</name>
+		</node>
+		<inclusive>true</inclusive>
+		<attributes>
+				<attribute name="value" value="*.dwl" />
+		</attributes>
+    <reference>https://confluence.corp.sprint.com:8452/pages/viewpage.action?pageId=13729837</reference>
+	</rule>
+	<rule>
+		<id>RULE_DW_04</id>
+		<name>Some of the DataWeave don't have dw:input-payload mimeType defined properly. See https://confluence.corp.sprint.com:8452/display/MULE/Code+Review+Must+Listy</name>
+		<type>configuration</type>
+		<node>
+			<namespace></namespace>
+			<name>dw:input-payload</name>
+		</node>
+		<inclusive>false</inclusive>
+		<attributes>
+				<attribute name="mimeType" value="*" />
+		</attributes>
+    <reference>https://confluence.corp.sprint.com:8452/display/MULE/Code+Review+Must+List	</reference>
+	</rule>
+	<rule>
+		<id>RULE_DW_05</id>
+		<name>Some of the DataWeave did not externalized the set-variable script. classpath:dwScripts location. See https://confluence.corp.sprint.com:8452/pages/viewpage.action?pageId=13729837</name>
+		<type>configuration</type>
+		<node>
+			<namespace></namespace>
+			<name>dw:set-variable</name>
+		</node>
+		<inclusive>false</inclusive>
+		<attributes>
+				<attribute name="value" value="*.dwl" />
+		</attributes>
+    <reference>https://confluence.corp.sprint.com:8452/pages/viewpage.action?pageId=13729837</reference>
+	</rule>
+</rules>

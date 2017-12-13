@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rules>
   <rule>
-    <id>RULE_010</id>
+    <id>RULE_FLOW_01</id>
     <name>Flow names should match the naming convention</name>
     <type>element</type>
     <node>
@@ -14,5 +14,18 @@
     </attributes>
     <reference>https://confluence.corp.sprint.com:8452/display/MULE/Design+Display+Naming+Convention</reference>
   </rule>
+  <rule>
+    <id>RULE_FLOW_02</id>
+    <name>Sub-flow names should match the naming convention. Use lowercase with a proper prefix name (ie: sf, mf, cf..)</name>
+    <type>element</type>
+    <node>
+      <namespace></namespace>
+      <name>sub-flow</name>
+    </node>
+    <inclusive>true</inclusive>
+    <attributes>
+      <attribute name="name" value="^(((sf-)|(common-)|(cf-)|(xh-))+[a-z-]*$)" />
+    </attributes>
+    <reference>https://confluence.corp.sprint.com:8452/display/MULE/Design+Display+Naming+Convention</reference>
+  </rule>
 </rules>
-
