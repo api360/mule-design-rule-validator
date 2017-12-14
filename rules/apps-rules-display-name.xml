@@ -16,7 +16,7 @@
 	</rule>
   <rule>
 		<id>RULE_JSON_01</id>
-		<name>JSON pareser is will not work</name>
+		<name>JSON pareser may not work properly</name>
 		<type>element</type>
 		<node>
 			<namespace></namespace>
