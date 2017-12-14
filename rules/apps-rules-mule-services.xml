@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules>
+  <rule>
+		<id>RULE_COMMON_01</id>
+		<name>Session Variables should be avoided</name>
+		<type>element</type>
+		<node>
+			<namespace></namespace>
+			<name>set-session-variable</name>
+		</node>
+		<inclusive>false</inclusive>
+	</rule>
+	<rule>
+		<id>RULE_COMMON_02</id>
+		<name>in-memory cache should be avoided</name>
+		<type>configuration</type>
+		<node>
+			<namespace></namespace>
+			<name>in-memory-store</name>
+		</node>
+		<inclusive>false</inclusive>
+	</rule>
+  <rule>
+		<id>RULE_COMMON_03</id>
+		<name>Groovy Component/Transformer is not allowed</name>
+		<type>element</type>
+		<node>
+			<namespace>scripting</namespace>
+			<name>script</name>
+		</node>
+		<inclusive>false</inclusive>
+		<attributes>
+			<attribute name="engine" value="Groovy" />
+		</attributes>
+	</rule>
+  <rule>
+		<id>RULE_COMMON_04</id>
+		<name>JavaScript Component/Transformer is not allowed</name>
+		<type>element</type>
+		<node>
+			<namespace>scripting</namespace>
+			<name>script</name>
+		</node>
+		<inclusive>false</inclusive>
+		<attributes>
+			<attribute name="engine" value="JavaScript" />
+		</attributes>
+	</rule>
+</rules>
