@@ -3,7 +3,7 @@
   <rule>
 		<id>RULE_DW_01</id>
 		<name>The display name needs to be changed. Follow the C4E display naming convention for DataWeave component. Example:"DW <![CDATA[<define the purpose of this DW>]]>". See https://confluence.corp.sprint.com:8452/display/MULE/Design+Display+Naming+Convention </name>
-		<type>element</type>
+		<type>configuration</type>
 		<node>
 			<namespace>dw</namespace>
 			<name>transform-message</name>

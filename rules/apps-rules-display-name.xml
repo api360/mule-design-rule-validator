@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rules>
   <rule>
-		<id>RULE_CHOICE_01</id>
-		<name>Change the display name of the CHOICE component. Example: CHECK IF <![CDATA[<replace it with self-explanatory criteria>]]>"</name>
+		<id>RULE_CHOICE_001</id>
+		<name>CHOICE Change the display name of the CHOICE component. Example: CHECK IF <![CDATA[<replace it with self-explanatory criteria>]]>"</name>
 		<type>element</type>
 		<node>
 			<namespace></namespace>
 			<name>choice</name>
 		</node>
-		<inclusive>true</inclusive>
+		<inclusive>false</inclusive>
 		<attributes>
 				<attribute name="doc:name" value="^((CHECK ))+[a-zA-Z-\s]*$" />
 		</attributes>
@@ -16,7 +16,7 @@
 	</rule>
   <rule>
 		<id>RULE_JSON_01</id>
-		<name>JSON pareser may not work properly</name>
+		<name>JSON parser may not work properly</name>
 		<type>element</type>
 		<node>
 			<namespace></namespace>
@@ -28,5 +28,4 @@
 		</attributes>
     <reference>https://confluence.corp.sprint.com:8452/display/MULE/Design+Display+Naming+Convention</reference>
 	</rule>
-
 </rules>

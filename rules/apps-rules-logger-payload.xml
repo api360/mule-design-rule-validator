@@ -8,9 +8,23 @@
 			<namespace></namespace>
 			<name>logger</name>
 		</node>
-		<inclusive>false</inclusive>
+		<inclusive>true</inclusive>
 		<attributes>
 				<attribute name="message" value="#\[(.*)message.payloadAs(.*)" />
+		</attributes>
+    <reference>https://confluence.corp.sprint.com:8452/display/MULE/Design+Display+Naming+Convention</reference>
+	</rule>
+  <rule>
+		<id>RULE_LOGGER_02</id>
+		<name>The display name needs to be changed. Follow the C4E display naming convention for Logger component. Example:"LOG DEBUG <![CDATA[<replace with your aactual message>]]>"</name>
+		<type>element</type>
+		<node>
+			<namespace></namespace>
+			<name>logger</name>
+		</node>
+		<inclusive>false</inclusive>
+		<attributes>
+				<attribute name="doc:name" value="^((LOG ))+[a-zA-Z-\s]*$" />
 		</attributes>
     <reference>https://confluence.corp.sprint.com:8452/display/MULE/Design+Display+Naming+Convention</reference>
 	</rule>
